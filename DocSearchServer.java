@@ -43,8 +43,9 @@ class Handler implements URLHandler {
            if (parameters[0].equals("q")) {
                String result = "";
                List<String> foundPaths = new ArrayList<>();
-               for(File f: paths) {
-                   if(FileHelpers.readFile(f).contains(parameters[1])) {
+               for(File f: paths) { //checks for contents here //switch readFile instead look at name 
+                   if(FileHelpers.readFile(f).contains(parameters[1]))
+                   {
                        foundPaths.add(f.toString());
                    }
                }
